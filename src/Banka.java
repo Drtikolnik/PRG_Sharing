@@ -1,18 +1,16 @@
 public class Banka {
     private double zustatek = 1000;
 
-    public void vyberStovku(){
+    public synchronized void vyberStovku(){
         zustatek -= 100;
         System.out.println("bylo ubráno 100 kč, zustatek: " + zustatek);
     }
 
 
-    public void pridejDveste(){
+    public synchronized void pridejDveste(){
         zustatek += 200;
         System.out.println("bylo přidáno 200kč, zustatek: " + zustatek);
     }
-
-
 
 
 
