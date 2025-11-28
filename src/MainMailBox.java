@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class MainMailBox {
-    Scanner sc = new Scanner(System.in);
-    public /*static*/ void main(String[] args) {
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
 
         MailBox m = new MailBox();
 
@@ -25,17 +25,17 @@ public class MainMailBox {
         });
 
 
+
+
+        postak.start();
+        adresat.start();
+
         try{
             postak.join();
             adresat.join();
         }catch(Exception e){
             e.printStackTrace();
         }
-
-        postak.start();
-        adresat.start();
-
-
 
 
 
